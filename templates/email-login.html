@@ -55,11 +55,16 @@
             </div>
             <div class="text-center">
                 <small>
-                    Forgot your password?<a href="#" class="signup-form form a">Click here</a>
+                    Forgot your password? <a href="#" class="signup-form form a">Click here</a>
+                </small>
+            </div>
+            <div class="text-center">
+                <small>
+                    Login through username <a href="{{ url_for('login1') }}" class="signup-form form a">here</a>
                 </small>
             </div>
         </form>
-        <div class="text-center">Login through username <a href="{{ url_for('login1') }}" class="signup-form form a">here</a></div>
+        <div class="text-center">Need an account? <a href="{{ url_for('registration') }}" class="signup-form form a">Clcik here to sign up</a></div>
     </div>
     </body>
 </html>
