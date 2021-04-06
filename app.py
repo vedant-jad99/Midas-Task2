@@ -15,7 +15,7 @@ def home():
 def registration():
     form = RegistrationForm()
     if not form.validate_on_submit():
-        print("Not valid")
+        print("Not-valid")
     else:
         flash('Account created for {}'.format(form.username.data), 'success') 
         return redirect(url_for('login1'))
@@ -28,7 +28,7 @@ def login1():
         print("Not valid")
     return render_template("username-login.html", title="Login", form=form)
 
-@app.route("/login-email")
+@app.route("/login-email", methods=["GET", "POST"])
 def login2():
     form = LoginForm2()
     if not form.validate_on_submit():
