@@ -1,5 +1,5 @@
 from flask import render_template, url_for, flash, redirect
-from app import app
+from app import app, bcrypt, db
 from app.forms import RegistrationForm, LoginForm1, LoginForm2
 from app.models import User
 
