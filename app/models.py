@@ -11,4 +11,4 @@ class User(db.Model):
     account_created = db.Column(db.DateTime, nullable=False, default=datetime.now())
 
     def __repr__(self):
-        return "User details - Name: {}, Username: {}, Email: {}".format(self.first_name + self.last_name, self.username, self.email)
+        return "User details - Name: {}, Username: {}, Email: {}".format(self.first_name + " " + self.last_name, self.username, self.email)
