@@ -50,6 +50,8 @@
                     {% endif %}
                 </div>
             </fieldset>
+            {{ form.remember }} Remember me
+            <br><br>
             <div class="form-group">
                 {{ form.submit(class="btn btn-success btn-lg btn-block") }}
             </div>
@@ -65,6 +67,19 @@
             </div>
         </form>
         <div class="text-center">Need an account? <a href="{{ url_for('registration') }}" class="signup-form form a">Clcik here to sign up</a></div>
+    </div>
+    <div class="container">
+        <div class="text-center limit">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {%for category, message in messages %}
+                        <div class="alert alert-{{ category }} width: 100px">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </div>
     </div>
     </body>
 </html>
