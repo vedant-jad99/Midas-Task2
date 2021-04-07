@@ -1,8 +1,14 @@
-from app import db
+from app import db, login_manager
+from flask_login import UserMixin
 from datetime import datetime
 
-class User(db.Model):
-    id_ = db.Column(db.Integer, primary_key=True)
+@login_manager.user_loader
+def load_user(userid):
+    return User.query.get(int(userid))
+
+
+class User(db.Model, UserMixin):
+    id = db.Column(db.Integer, primary_key=True)
     first_name = db.Column(db.String(40), unique=False, nullable=True)
     last_name = db.Column(db.String(40), unique=False, nullable=True)
     username = db.Column(db.String(20), unique=True, nullable=False)
