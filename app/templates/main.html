@@ -6,9 +6,50 @@
         <title>Home Page</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" text="text/css" href="{{ url_for('static', filename='first.css') }}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-        <h1>Hello</h1>
+        <div class="navbar">
+            <a href="#"><img src="{{ url_for('static', filename='logo.png') }}" class="logo center" alt="Cinque Terre"></a>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#" style="float:right">
+                    <i class="fa fa-search dropdown"></i>
+            </a>
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <div class="dropdown-content">
+                    {% if current_user.is_authenticated %}
+                        <a href=""> Account </a>
+                        <a href="{{ url_for('logout') }}"> Logout </a>
+                    {% else %}
+                        <a href="{{ url_for('registration') }}"> Sign Up </a> 
+                        <a href="{{ url_for('login1') }}"> Log In </a> 
+                    {% endif %}
+                </div>
+            </div> 
+        </div>
+        
+        <div class="holder placeholder child1">
+            <img src="{{ url_for('static', filename='1.jpg') }}" class="main_img center" alt="Cinque Terre"> 
+        </div>
+        <div class="holder circle child2">
+            <h1> Web app task </h1>
+            {% if current_user.is_authenticated %}
+                Welcome {{ current_user.first_name + " " + current_user.last_name }}
+            {% else %}
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                <br>
+                <span>
+                    <a href="{{url_for('login1')}}"> Log In </a> | 
+                    <a href="{{url_for('registration')}}"> Sign Up </a>
+                </span>
+            {% endif %}
+        </div>
     </body>
 </html>
