@@ -1,6 +1,6 @@
 body {
     color: #fff;
-    background: url(img.jpg);
+    background: url(img1.gif);
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Roboto', sans-serif;
@@ -9,8 +9,8 @@ body {
 .form-control {
     height: 40px;
     box-shadow: none;
-    color: rgba(255, 255, 255, 0);
-}
+    color: #969fa4;
+}   
 
 .form-control:focus {
     border-color: #5cb85c;
