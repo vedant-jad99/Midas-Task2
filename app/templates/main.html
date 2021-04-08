@@ -10,7 +10,8 @@
         <div class="holder circle child2">
             <h1> Web app task </h1>
             {% if current_user.is_authenticated %}
-                Welcome {{ current_user.first_name + " " + current_user.last_name }}
+                <h2>Welcome<h2> 
+                <p>{{ current_user.first_name.capitalize() + " " + current_user.last_name.capitalize() }}<p>
             {% else %}
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
