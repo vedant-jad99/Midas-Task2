@@ -1,5 +1,6 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, SubmitField, BooleanField
+from wtforms import StringField, PasswordField, SubmitField, BooleanField, TextAreaField
+from wtforms.fields.html5 import URLField, EmailField
 from wtforms.validators import DataRequired, Length, Email, EqualTo, ValidationError
 from app.models import User
 
@@ -34,3 +35,13 @@ class LoginForm2(FlaskForm):
     password = PasswordField("Password", validators=[DataRequired()])
     submit = SubmitField("Login")
     remember = BooleanField("Remember Me")
+
+class Info(FlaskForm):
+    about = TextAreaField("About")
+    link1 = URLField("Link 1")
+    link2 = URLField("Link 2")
+    link3 = URLField("Link 3")
+    link4 = URLField("Link 4")
+    profession = StringField("Profession")
+    recovery_mail = EmailField("Recovery email")
+    done = SubmitField("Done")
