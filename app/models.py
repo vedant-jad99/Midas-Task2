@@ -13,7 +13,7 @@ class User(db.Model, UserMixin):
     last_name = db.Column(db.String(40), unique=False, nullable=True)
     username = db.Column(db.String(20), unique=True, nullable=False)
     email = db.Column(db.String(100), unique=True, nullable=False)
-    password = db.Column(db.String(40), unique=False, nullable=False)
+    password = db.Column(db.String(80), unique=False, nullable=False)
     account_created = db.Column(db.DateTime, nullable=False, default=datetime.now())
     info = db.relationship('UserInfo', backref='info', lazy=True)
 
@@ -31,7 +31,7 @@ class UserInfo(db.Model, UserMixin):
     profession = db.Column(db.String(100), unique=False, nullable=True)
     profile = db.Column(db.String(100), unique=False, nullable=True, default='profile.png')
     recovery_mail = db.Column(db.String(100), unique=False, nullable=True)
-    user_id = db.Column(db.String(20), db.ForeignKey('user.id'), unique=True, nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), unique=True, nullable=False)
 
     def __repr__(self):
         return "Profession - {} Id- {}".format(self.profession, self.id)
