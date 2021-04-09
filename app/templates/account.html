@@ -2,7 +2,7 @@
     {% block content %}
         <span>
             <div class="account_name">
-                <h1><a href="{{ url_for('profile') }}">{{ current_user.first_name.capitalize() + " " + current_user.last_name.capitalize() }}</a></h1> 
+                <span><h1>{{ current_user.first_name.capitalize() + " " + current_user.last_name.capitalize() }}</h1> <a href="{{ url_for('profile') }}"> (Edit Profile) </a></span>
             </div>
             <div class="account_pic_holder">
                 <center>
