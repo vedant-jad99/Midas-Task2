@@ -1,3 +1,12 @@
+f18bd56 Updated account.html
+753b7ab Modified requirements.txt
+277a1bf Modified database URI
+7177b9d Modified database URI
+21c689f Adding more dependencies to requirements file
+bcc4bff Added different Procfile
+07969b2 Removed procfile
+1da3eff Merge pull request #1 from vedant-jad99/account-addition
+b638c71 Adding log files
 02fe1d3 Adding Profile and requirements file
 02a5980 Modified the table structure
 41ee5f6 Modifications to existing routes and addition of more routes
@@ -9,6 +18,7 @@ f50ddcf Added profile and accounts page
 8ddce86 Added user info form
 534e2a2 Added css for accounts page
 60d441c Added links to account and home section
+c33b6da Update README.md
 20a97aa Modified image paths
 70c3f57 Adding all images in a folder
 dbd222c Minor modifications
