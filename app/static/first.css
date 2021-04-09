@@ -147,3 +147,61 @@ body
     top: 100px;
     left: 800px;
 }
+
+.account_name {
+    margin-top: 1%;
+    margin-left: 3%;
+    padding-left: 2%;
+    height: auto;
+    width: 50%;
+    color: white;
+}
+
+.account_name h1 {
+    font-family: "Brush Script MT", cursive;
+    font-size: 70px;
+    text-decoration: underline;
+}
+
+.account_pic {
+    margin-right: 2%;
+    background-color: white;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+}
+
+.account_pic_holder {
+    float: right;
+    max-width: 20%;
+    margin-right: 2%;
+    padding: 1%;
+    border:rgb(255, 255, 255) solid;
+    background-color: rgba(219, 219, 213);
+}
+
+.account_pic img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.account_user {
+    margin-top: 10px;
+}
+
+.account_info {
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 1%;
+    margin-left: 3%;
+    margin-bottom: 3%;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-bottom: 1%;
+    height: auto;
+    width: 65%;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px 20px 4px 20px;
+}
