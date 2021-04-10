@@ -31,7 +31,7 @@ There are two development versions:
     - Implementation of backend fetch and store.
     - Proper flow of `requests` and `responses`.
 
-Link to [version 0.1](/releases/latest)
+Link to [version 0.1](https://github.com/vedant-jad99/Midas-Task4/tree/v0.1)
 
 + Version 0.2 involved addition of more designs and additional features. Development phases included:
     - Additional templates design
